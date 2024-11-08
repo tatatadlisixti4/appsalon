@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.formulario {
+    margin-top: 5rem;
+    width: 100%;
+    
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    label {
+        flex: 0 0 10rem;
+    }
+    input {
+        flex: 1; // 1 1 0
+        border: none; // all: unset; para eliminar todo el css
+        padding: calc(v.$separacion / 4);
+        border-radius: 1rem;
+
+        &:disabled {
+            background-color: color.mix(#fff, v.$negro, 45%);
+            color: v.$blanco;
+            cursor: not-allowed;
+        }
+    }
+}

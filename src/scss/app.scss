@@ -1,0 +1,4 @@
+// Usar el contenido de un archivo Sass (dentro de un directorio, se va auto al _index.scss) en el archivo actual.
+@use 'base';
+@use 'layout';
+@use 'componentes';

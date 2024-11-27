@@ -25,6 +25,7 @@ function iniciarApp() {
     paginaAnterior();
     paginaSiguiente();
     consultarAPI(); // Consulta la API en el backend de PHP
+    const url = `${location.origin}/api/servicios`;
 
     idCliente(); // Seleccionar id del cliente para la cita
     nombreCliente(); // Seleccionar nombre para la cita

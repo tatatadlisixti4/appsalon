@@ -121,6 +121,7 @@ async function consultarAPI() {
         mostrarServicios(servicios);
     } catch (error) {
         console.log(error);
+        console.log('Hola');
     }
 }
 

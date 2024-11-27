@@ -26,6 +26,7 @@ function iniciarApp() {
     paginaSiguiente();
     consultarAPI(); // Consulta la API en el backend de PHP
     const url = `${location.origin}/api/servicios`;
+    console.log(url);
 
     idCliente(); // Seleccionar id del cliente para la cita
     nombreCliente(); // Seleccionar nombre para la cita
@@ -115,7 +116,8 @@ function paginaSiguiente() {
 
 async function consultarAPI() {
     try {
-        const url = `${location.origin}/api/servicios`;
+        //const url = `${location.origin}/api/servicios`;
+        const url = "https://appsalon-thadli.sao.dom.my.id/api/servicios";
         console.log(url);
         const resultado = await fetch(url);
         const servicios = await resultado.json();
@@ -331,7 +333,8 @@ async function reservarCita() {
 
     // Petición hacia la api
     try {
-        const url = `${location.origin}/api/citas`;
+        //const url = `${location.origin}/api/citas`;
+        const url = "https://appsalon-thadli.sao.dom.my.id/api/citas";
         const respuesta = await fetch(url, {
             method:'POST', 
             body: datos

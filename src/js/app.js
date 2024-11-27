@@ -120,6 +120,7 @@ async function consultarAPI() {
         const servicios = await resultado.json();
         mostrarServicios(servicios);
     } catch (error) {
+        console.log('Hola');
         console.log(error);
         console.log('Hola');
     }

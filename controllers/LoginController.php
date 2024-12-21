@@ -18,6 +18,7 @@ class LoginController {
                 if($usuario) {
                     // Verificar contraseña
                     if(!$usuario->comprobarPasswordAndVerificado($auth->password)) {
+
                         // Autenticar al usuario
                         session_start();
                         $_SESSION['id'] = $usuario->id;
@@ -33,7 +34,7 @@ class LoginController {
                             header('Location: /cita');
                         }
                     } else {
-                        debuguear("AHNSBDHJKASBNHDJKASBNJKDAS");
+                        debuguear("Contraseña incorrecta");
                     }
                 } else {
                     Usuario::setAlerta('error', 'Correo Inválido');

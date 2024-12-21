@@ -20,7 +20,7 @@ function esUltimo(string $actual, string $proximo): bool {
     return false;
 }
 
-// Funciín que revisa si el usuario está autenticado.
+// Función que revisa si el usuario está autenticado.
 function isAuth(): void {
     if(!isset($_SESSION['login'])) {
         header('Location: /');
